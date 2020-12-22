@@ -362,6 +362,8 @@ The Tyk Dashboard uses the "mongo-pump-aggregate" collection to display analytic
 - `"disable_capture_response_body"` - (optional) An option to disable logging of response body. Type: Boolean. Default value is `false`.
 - `"user_id_header"` - (optional) An optional field name to identify User from a request or response header. Type: String.
 - `"company_id_header"` - (optional) An optional field name to identify Company (Account) from a request or response header. Type: String.
+- `"authorization_header_name"` - (optional) An optional request header field name to use to identify the User in Moesif. Type: String. Default value is `authorization`.
+- `"authorization_user_id_field"` - (optional) An optional field name use to parse the User from authorization header in Moesif. Type: String. Default value is `sub`.
 - `"enable_bulk"` - Set this to `true` to enable `bulk_config`.
 - `"bulk_config"`- (optional) Batch writing trigger configuration.
   * `"event_queue_size"` - (optional) An optional field name which specify the maximum number of events to hold in queue before sending to Moesif. In case of network issues when not able to connect/send event to Moesif, skips adding new to event to queue to prevent memory overflow. Type: int. Default value is `10000`.
